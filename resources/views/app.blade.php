@@ -7,10 +7,10 @@
 	<title>Laravel</title>
 
 	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
-
+	<link href="{{ asset('/css/font-awesome.css') }}" rel="stylesheet">
+	
 	<!-- Fonts -->
 	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
-
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -18,6 +18,18 @@
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
+
+	<style>
+
+	.navbar {
+		margin-bottom: 0px;
+	}
+
+	.container {
+		margin-top:15px;
+	}
+
+	</style>
 </head>
 <body>
 	<nav class="navbar navbar-default">
@@ -36,8 +48,8 @@
 				<ul class="nav navbar-nav navbar-right">
 						<li><a href="{{ url('/') }}">Home</a></li>
 						<li><a href="{{ url('/about') }}">About</a></li>
-						<li><a href="{{ url('/resources') }}">Local Resources</a></li>
-						<li><a href="{{ url('/help') }}">Need Help?</a></li>
+						<li><a href="{{ url('/#') }}">Local Resources</a></li>
+						<li><a href="{{ url('/#') }}">Need Help?</a></li>
 						<li><a href="{{ url('/register') }}">Register</a></li>
 				</ul>
 			</div>
@@ -45,6 +57,14 @@
 	</nav>
 
 	@yield('content')
+
+<footer style="position:fixed; bottom:0px; background-color:white; width:100%;">
+	<div class="navbar" style="padding-left:15px; padding-top:10px;">
+		<a href="#">Contact</a> / <a href="#">Terms & Conditions</a> / <a href="#">Privacy Policy</a>
+		<p>Duis autem vel eum iriure dolor in hend rerit in vulputate velit esse</p> 
+	</div>
+</div>
+</footer>
 
 	<!-- Scripts -->
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>

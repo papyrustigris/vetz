@@ -16,6 +16,9 @@ Route::get('/', 'HomeController@index');
 Route::get('home', 'HomeController@index');
 
 Route::get('register', 'RegisterController@index');
+
+Route::get('about', 'HomeController@about');
+
 Route::post('register', 'RegisterController@store');
 
 Route::controllers([

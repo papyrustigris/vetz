@@ -1,11 +1,17 @@
 <?php namespace App\Http\Controllers;
 
+use \Input;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
 class RegisterController extends Controller {
+
+	public function __construct () 
+	{
+		//
+	}
 
 	/**
 	 * Display a listing of the resource.
@@ -32,9 +38,21 @@ class RegisterController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store($id)
 	{
-		//
+		$veteran = $this->veteran->findOrFail($id);
+
+		$input = Input::all();
+
+		$veteran = new VeteransForm;
+	    $veteran = $veteran->create($input);
+      
+	    return Response::json([
+	        'status' => 201,
+	        'message' => 'Announcement Item Created Successfully',
+	        'data' => $announcement->toArray()
+		    ], 201);
+
 	}
 
 	/**
