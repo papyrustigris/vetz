@@ -5,7 +5,7 @@
 	<div class="row">
 		<div class="col-md-6" style="margin: 20px 40px;
 									 margin-top: 170px;
-									 height: 350px;
+									 height:100%;
 									 background-color: rgba(38, 51, 94, 0.8);
 									 color: white;">
 			<h1 style="margin-top:15px; padding:15px 5px;">Help Rockford Salute Its Veterans!</h1>

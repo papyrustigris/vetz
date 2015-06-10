@@ -21,6 +21,10 @@
 
 	<style>
 
+	body {
+		font-family: Gobold-Bold;
+	}
+
 	.navbar {
 		margin-bottom: 0px;
 		background-color: #26335e;

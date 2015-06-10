@@ -1,4 +1,15 @@
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+
+@font-face {
+  font-family: 'Arial Rounded Black';
+  src: url('../fonts/Arial-Rounded-Black.ttf');
+}
+
+@font-face {
+  font-family: 'Gobold-Bold';
+  src: url('../fonts/Gobold-Bold.ttf');
+}
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
