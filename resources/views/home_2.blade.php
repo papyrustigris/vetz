@@ -4,7 +4,8 @@
 <div class="container-fluid" style="background-image: url({{ asset('/images/hero_2.jpg') }});">
 	<div class="row">
 		<div class="col-md-6" style="margin: 20px 40px;
-									 margin-top: 170px;
+									 margin-top: 100px;
+									 margin-bottom:100px;
 									 height:100%;
 									 background-color: rgba(38, 51, 94, 0.8);
 									 color: white;">

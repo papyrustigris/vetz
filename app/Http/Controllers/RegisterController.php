@@ -49,8 +49,8 @@ class RegisterController extends Controller {
       
 	    return Response::json([
 	        'status' => 201,
-	        'message' => 'Announcement Item Created Successfully',
-	        'data' => $announcement->toArray()
+	        'message' => 'Form Data Stored Successfully',
+	        'data' => $veteran->toArray()
 		    ], 201);
 
 	}

@@ -43,4 +43,13 @@ class HomeController extends Controller {
 		return view('about');
 	}
 
+	public function resources() 
+	{
+		return view('resources');
+	}
+
+	public function help()
+	{
+		return view('help');
+	}
 }

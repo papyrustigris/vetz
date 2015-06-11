@@ -1,10 +1,11 @@
 @extends('app')
 
 @section('content')
-<div class="container-fluid" style="background-image: url({{ asset('/images/hero_1.jpg') }});">
+<div class="container-fluid" style="background-image: url({{ asset('/images/hero_1.jpg') }}); background-size:100%;">
 	<div class="row">
 		<div class="col-md-6" style="margin: 20px 40px;
-									 margin-top: 170px;
+									 margin-top: 100px;
+									 margin-bottom: 100px;
 									 height: 100%;
 									 border: 4px solid white;
 									 color: white;">

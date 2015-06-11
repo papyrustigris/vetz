@@ -21,20 +21,34 @@
 
 	<style>
 
-	body {
-		font-family: Gobold-Bold;
+	html {
+		font-family: Arial-Rounded-Bold;
 	}
+
+	h1, .navbar {
+		font-family: Gobold-Bold;
+		font-size:20px;
+	}
+
+	h1 {
+		font-size:28px;
+	}
+
+	p {
+		font-family: Arial-Rounded-Bold;
+		font-size: 19px;
+	}
+
 
 	.navbar {
 		margin-bottom: 0px;
 		background-color: #26335e;
-		max-height:60px;
 		border:none;
 		border-radius: 0px;
 	}
 
 	.navbar-header {
-		min-height: 60px;
+		min-height: 70px;
 	}
 
 	.navbar-footer {
@@ -52,7 +66,7 @@
 		}
 
 	.navbar-brand {
-		max-width: 150px;
+		max-width: 180px;
 	}
 
 	.navbar-default .navbar-nav > li > a {
@@ -63,6 +77,7 @@
 		background-color: white;
 	}
 
+
 	.navbar-right > img {
 	  max-height: 60px;
 	  position: relative;
@@ -72,7 +87,13 @@
 	
 	.navbar-right > span {
 	  position: relative;
-	  bottom: 30px;
+	  top:10px;
+	  right:0px;
+	  padding: 10px 15px;
+	}
+
+	.navbar-rt-footer {
+		padding-bottom: 20px;
 	}
 
 	span > img {
@@ -85,6 +106,18 @@
 
 	li.active > a {
 		background-color:white;
+	}
+
+	.navbar-default .navbar-nav > .active > a:hover {
+			color:#b62133;
+		}
+
+	.navbar-default .navbar-nav > li > a {
+		margin-top:5px;
+	}
+
+	.navbar-default .navbar-nav > li > a:hover{
+		color: #b62133;
 	}
 
 	</style>
@@ -112,8 +145,8 @@
 								style="background-color:white; color:black; min-height:60px;">Home I</a></li>
 						<li><a href="{{ url('/home_2') }}">Home II</a></li>
 						<li><a href="{{ url('/about') }}">About</a></li>
-						<li><a href="{{ url('/#') }}">Local Resources</a></li>
-						<li><a href="{{ url('/#') }}">Need Help?</a></li>
+						<li><a href="{{ url('/resources') }}">Local Resources</a></li>
+						<li><a href="{{ url('/help') }}">Need Help?</a></li>
 						<li><a href="{{ url('/register') }}"
 								style="background-color: #b62133; min-height:60px;">Register</a></li>
 				</ul>
@@ -124,15 +157,15 @@
 
 	@yield('content')
 
-<footer style="position:fixed; bottom:0px; background-color:white; width:100%; height:12%;">
+<footer style="position:fixed; bottom:0px; background-color:white; width:100%;">
 	<div class="navbar" style="padding-left:15px;">
 		<div class="navbar-header navbar-footer">
 			<a href="#">Contact</a> / <a href="#">Terms & Conditions</a> / <a href="#">Privacy Policy</a>
 			<p>Duis autem vel eum iriure dolor in hend rerit in vulputate velit esse</p> 
 		</div>
-		<div class="navbar-right">
-			<img src="{{ asset('/images/footer_600px.png') }}" alt="" class="img-responsive" />
+		<div class="navbar-right navbar-rt-footer">
 			<span>
+				<img src="{{ asset('/images/footer_600px.png') }}" style="max-height:50px;" alt="" />
 				<img src="{{ asset('/images/fb_icon.png') }}" style="max-height:35px;" alt="" />
 				<img src="{{ asset('/images/tw_icon.png') }}" style="max-height:35px;" alt="" />
 			</span>
