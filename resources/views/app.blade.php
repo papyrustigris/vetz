@@ -54,6 +54,7 @@
 	.navbar-footer {
 		padding-top:12px;
 		padding-left: 15px;
+		font-family: Arial-Rounded-Bold;
 	}
 
 		.navbar-footer > a {
@@ -78,11 +79,11 @@
 	}
 
 
-	.navbar-right > img {
+	.navbar-rt-footer > img {
 	  max-height: 60px;
 	  position: relative;
-	  top:5px;
-	  right: 150px;
+	  top:10px;
+	  right: 160px;
 	}
 	
 	.navbar-right > span {
@@ -94,6 +95,7 @@
 
 	.navbar-rt-footer {
 		padding-bottom: 20px;
+
 	}
 
 	span > img {
@@ -120,12 +122,32 @@
 		color: #b62133;
 	}
 
+	.well {
+		background-color: white;
+		color: #26335e;
+		border: 4px solid #26335e;
+	}
+
+
+	#homepage-box {
+		margin: 70px 10px;
+		margin-bottom:150px;
+	}
+
+
+   @media only screen and (max-width : 650px) {
+		#homepage-box {
+			margin: 70px 10px;
+			margin-bottom:250px;
+			margin-top: 15px;
+		}
+	}
+
 	</style>
 
 </head>
 <body>
 	<nav class="navbar navbar-default">
-
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -142,7 +164,7 @@
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right">
 						<li><a href="{{ url('/') }}"
-								style="background-color:white; color:black; min-height:60px;">Home I</a></li>
+								style="background-color:white; color:black; min-height:70px;margin-top: 0px;padding-top: 25px;">Home I</a></li>
 						<li><a href="{{ url('/home_2') }}">Home II</a></li>
 						<li><a href="{{ url('/about') }}">About</a></li>
 						<li><a href="{{ url('/resources') }}">Local Resources</a></li>
@@ -157,23 +179,21 @@
 
 	@yield('content')
 
-<footer style="position:fixed; bottom:0px; background-color:white; width:100%;">
-	<div class="navbar" style="padding-left:15px;">
-		<div class="navbar-header navbar-footer">
-			<a href="#">Contact</a> / <a href="#">Terms & Conditions</a> / <a href="#">Privacy Policy</a>
-			<p>Duis autem vel eum iriure dolor in hend rerit in vulputate velit esse</p> 
+	<footer style="position:fixed; bottom:0px; background-color:white; width:100%;">
+		<div class="navbar" style="padding-left:15px;">
+			<div class="navbar-header navbar-footer">
+				<a href="#">Contact</a> / <a href="#">Terms & Conditions</a> / <a href="#">Privacy Policy</a>
+				<p>Duis autem vel eum iriure dolor in hend rerit in vulputate velit esse</p> 
+			</div>
+			<div class="navbar-right navbar-rt-footer">
+				<span>
+					<img src="{{ asset('/images/footer_600px.png') }}" style="max-height:50px;" alt="" />
+					<img src="{{ asset('/images/fb_icon.png') }}" style="max-height:35px;" alt="" />
+					<img src="{{ asset('/images/tw_icon.png') }}" style="max-height:35px;" alt="" />
+				</span>
+			</div>
 		</div>
-		<div class="navbar-right navbar-rt-footer">
-			<span>
-				<img src="{{ asset('/images/footer_600px.png') }}" style="max-height:50px;" alt="" />
-				<img src="{{ asset('/images/fb_icon.png') }}" style="max-height:35px;" alt="" />
-				<img src="{{ asset('/images/tw_icon.png') }}" style="max-height:35px;" alt="" />
-			</span>
-		</div>
-
-
-	</div>
-</footer>
+	</footer>
 
 	<!-- Scripts -->
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
