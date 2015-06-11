@@ -14,7 +14,7 @@
 					Saturday, October 10 <br>
 					BMO Harris Bank Center <br>
 					Rockford, IL  <br><br>
-					* Although tickets are required for entry, they will be provided to veterans and the community at no cost. 
+					<i>* Although tickets are required for entry, they will be provided to veterans and the community at no cost. </i>
 				</p>
 			</div>
 		</div>

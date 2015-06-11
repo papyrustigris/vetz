@@ -110,12 +110,19 @@
 		background-color:white;
 	}
 
-	.navbar-default .navbar-nav > .active > a:hover {
+	.navbar-default .navbar-nav > a:hover {
 			color:#b62133;
 		}
 
+	.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus
+	{
+		background-color:white;
+		color:black;
+	}
+
 	.navbar-default .navbar-nav > li > a {
-		margin-top:5px;
+		padding-top:25px;
+		min-height: 70px;
 	}
 
 	.navbar-default .navbar-nav > li > a:hover{
@@ -163,14 +170,13 @@
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right">
-						<li><a href="{{ url('/') }}"
-								style="background-color:white; color:black; min-height:70px;margin-top: 0px;padding-top: 25px;">Home I</a></li>
+						<li><a href="{{ url('/') }}">Home I</a></li>
 						<li><a href="{{ url('/home_2') }}">Home II</a></li>
 						<li><a href="{{ url('/about') }}">About</a></li>
 						<li><a href="{{ url('/resources') }}">Local Resources</a></li>
 						<li><a href="{{ url('/help') }}">Need Help?</a></li>
 						<li><a href="{{ url('/register') }}"
-								style="background-color: #b62133; min-height:60px;">Register</a></li>
+								style="background-color: #b62133; min-height:70px;">Register</a></li>
 				</ul>
 			</div>
 		</div>
@@ -198,5 +204,18 @@
 	<!-- Scripts -->
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+	<script>
+
+		var url = window.location;
+		// Will only work if string in href matches with location
+		$('ul.nav a[href="'+ url +'"]').parent().addClass('active');
+
+		// Will also work for relative and absolute hrefs
+		$('ul.nav a').filter(function() {
+		    return this.href == url;
+		}).parent().addClass('active');
+
+	</script>
 </body>
 </html>
