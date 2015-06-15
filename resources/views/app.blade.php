@@ -153,6 +153,10 @@
 		}
 	}
 
+	.fwd-A, .fwd-B {
+		display: inline;
+	}
+
 	</style>
 
 </head>
