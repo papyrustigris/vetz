@@ -135,6 +135,9 @@
 		border: 4px solid #26335e;
 	}
 
+	.panel-footer {
+		text-align: center;
+	}
 
 	#homepage-box {
 		margin: 70px 10px;
