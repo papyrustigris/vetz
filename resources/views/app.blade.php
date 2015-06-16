@@ -160,6 +160,8 @@
 		}
 	}
 
+/* REGISTER */
+
 	.fwd-A, .fwd-B {
 		display: inline;
 	}
@@ -168,6 +170,10 @@
 		max-height:32px; 
 		position:relative; 
 		top:16px;
+	}
+
+	p.text-muted {
+		font-size: 16px; 
 	}
 
 	</style>

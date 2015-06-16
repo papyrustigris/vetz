@@ -25,11 +25,12 @@
 
 			<div class="">
 				<h2 style="font-family:Gobold-Bold; color:#26335e;">ABOUT</h2>
-				<p style="margin:20px 40px; color:#26335e;">
+				<p style="margin:20px 40px; color:#26335e; font-size:18px;">
 					From the Great War to today, the men and women of Rockford have stood together and joined the ranks of many before them in service to this great country. Their unwavering commitment and sacrifice does not go unnoticed. It’s our turn to salute. 
 					<br><br>Bergstrom Inc. and the Salvation Army of Winnebago County have planned an evening of thanks and appreciation for Rockford-area veterans. There is no ticket price associated with this event. Although tickets will be required for entry into the arena, this is a free community event. 
 				</p>
 				<a href="{{ url('/register')}}" class="btn btn-danger pull-right" style="padding:10px 40px; font-size:21px;">Register</a>
+				<br>
 			</div>
 
 			<div class="" style="margin-top:80px; margin-bottom:150px; color:#26335e;">

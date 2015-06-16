@@ -11,7 +11,7 @@
 			<div class="panel panel-default">
 
 				<div class="panel-heading text-center">
-					<h1>Begin Registration</h1>
+					<h1>Event Registration</h1>
 					Progress 1/5
 				</div>
 				
@@ -132,7 +132,7 @@
 							</div>
 						</div>
 
-						<div class="form-group">
+						<div class="form-group" style="padding:12px 0px; padding-bottom:0px; margin-bottom:4px;">
 							<div class="col-md-3">
 							  <label><input type="radio" name="gender" value="male"> Male</label>
 							</div>
@@ -146,15 +146,15 @@
 							</div>
 						</div>
 
-						<div class="form-group">
+						<div class="form-group" style="position:relative; bottom:12px;">
 							<div class="col-md-6">
-								<div class="checkbox">
-									<label><input type="checkbox" name="handicap" />Check box if you are handicapped or need assistance?</label>
+								<div class="checkbox" style="padding:8px;">
+									<label><input type="checkbox" name="handicap" />Check box if you are disabled or require assistance.</label>
 								</div>
-								<input style="display:none;" type="text" class="form-control" name="name" placeholder="Enter your name here">
+								<input style="display:none;" type="text" id="handicap-txt-input" class="form-control" name="name" placeholder="Enter your name here">
 							</div>
-							<div class="col-md-6">
-								<label>Tell us how you heard about the event:</label>
+							<div class="col-md-6" style="position:relative; top:30px;">
+								<label>Tell us how you heard about the event</label>
 								<select class="form-control" id="state" name="state" placeholder="State">
 									<option value="newspaper">Newspaper</option>
 									<option value="billboard">Billboard</option>
@@ -194,7 +194,7 @@
 			<div class="panel panel-default">
 
 				<div class="panel-heading text-center">
-					<h1>Are you military?</h1>
+					<h1>Are you a veteran, support personnel, or current member of the U.S. Armed Forces?</h1>
 					Progress 2/5
 				</div>
 				
@@ -286,7 +286,11 @@
 
 					<div class="form-group">
 						<div class="row">
+							<div class="col-md-12">
+								<label>Which Military Branch are you affiliated with?</label>
+							</div>
 							<div class="col-md-3">
+
 								<div class="radio">
 								  <label><input type="radio" name="branch" value="army"><img src="{{ asset('images/ARMY.png') }}" class="img-responsive" alt="mili-1"/></label>
 								</div>
@@ -469,7 +473,7 @@
 					<div class="form-group">
 						<div class="row">
 							<div class="col-md-12">
-								<label>Here is a nostalgia prompt explanation text area </label>
+								<label>We are collecting stories from Military personnel to include in this event. Use the text box below to share a story or memory of your Military service.</label>
 									<textarea type="" class="form-control" rows="5"></textarea>
 							</div>
 						</div>
@@ -602,6 +606,12 @@
 
 		</div>
 	</div>
+
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+				<p class="text-muted"><i>Completion of this Event Registration Form does not guarantee admittance as tickets are distributed in the order the requests are received.</i></p>
+		</div>
+	</div>
 </div> <!-- end container -->
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -610,6 +620,8 @@
 	$( document ).ready(function() {
 		$('input:radio[name="mili_or_not"]').filter('[value="military"]').attr('checked', true);
 		$(".fwd-B").hide();
+
+		$('input:checkbox[name="handicap"]').attr('checked', false);
 	});
 
 	$('input[type="radio"]').click(function(){
@@ -622,6 +634,11 @@
             $(".fwd-B").show();
         }
       });
+
+	$('input:checkbox[name="handicap"]').click(function () {
+		$('#handicap-txt-input').toggle();
+	});
+
 </script>
 
 <script>
@@ -632,31 +649,31 @@ $('#step-1-to-2').click(function () {
   $("#step-1, #step-2").toggle();
 });
 
-// A track
-$('#step-2-to-3a').click(function () {
-  $("#step-2, #step-3a").toggle();
-});
+	// A track
+	$('#step-2-to-3a').click(function () {
+	  $("#step-2, #step-3a").toggle();
+	});
 
-$('#step-3a-to-4a').click(function () {
-  $("#step-3a, #step-4a").toggle();
-});
+	$('#step-3a-to-4a').click(function () {
+	  $("#step-3a, #step-4a").toggle();
+	});
 
-$('#step-4a-to-5').click(function () {
-  $("#step-4a, #step-5").toggle();
-});
+	$('#step-4a-to-5').click(function () {
+	  $("#step-4a, #step-5").toggle();
+	});
 
-// B track
-$('#step-2-to-3b').click(function () {
-  $("#step-2, #step-3b").toggle();
-});
+	// B track
+	$('#step-2-to-3b').click(function () {
+	  $("#step-2, #step-3b").toggle();
+	});
 
-$('#step-3b-to-4b').click(function () {
-  $("#step-3b, #step-4b").toggle();
-});
+	$('#step-3b-to-4b').click(function () {
+	  $("#step-3b, #step-4b").toggle();
+	});
 
-$('#step-4b-to-5').click(function () {
-  $("#step-4b, #step-5").toggle();
-});
+	$('#step-4b-to-5').click(function () {
+	  $("#step-4b, #step-5").toggle();
+	});
 
 // BACK STEP
 
@@ -664,23 +681,23 @@ $('#step-2-to-1').click(function () {
   $("#step-2, #step-1").toggle();
 });
 
-// A track
-$('#step-4a-to-3a').click(function () {
-  $("#step-4a, #step-3a").toggle();
-});
+	// A track
+	$('#step-4a-to-3a').click(function () {
+	  $("#step-4a, #step-3a").toggle();
+	});
 
-$('#step-3a-to-2').click(function () {
-  $("#step-3a, #step-2").toggle();
-});
+	$('#step-3a-to-2').click(function () {
+	  $("#step-3a, #step-2").toggle();
+	});
 
-// B track
-$('#step-4b-to-3b').click(function () {
-  $("#step-4b, #step-3b").toggle();
-});
+	// B track
+	$('#step-4b-to-3b').click(function () {
+	  $("#step-4b, #step-3b").toggle();
+	});
 
-$('#step-3b-to-2').click(function () {
-  $("#step-3b, #step-2").toggle();
-});
+	$('#step-3b-to-2').click(function () {
+	  $("#step-3b, #step-2").toggle();
+	});
 
 </script>
 
