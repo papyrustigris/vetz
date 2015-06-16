@@ -68,6 +68,7 @@
 			font-size: 14px; 
 		}
 
+
 	.navbar-brand {
 		max-width: 180px;
 	}
@@ -133,7 +134,8 @@
 	}
 
 	.navbar-default .navbar-nav > li > a:hover{
-		color: #b62133;
+		background-color: #b62133;
+		color:white;
 	}
 
 	.well {
@@ -176,6 +178,15 @@
 		font-size: 16px; 
 	}
 
+	.stars-banner {
+		max-width: 80px;
+	}
+	
+	
+		#nav-register-link:hover {
+			color:black;
+			background-color: white;
+		}
 	</style>
 
 </head>
@@ -196,13 +207,13 @@
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right">
-						<li><a href="{{ url('/') }}">Home I</a></li>
-						<li><a href="{{ url('/home_2') }}">Home II</a></li>
-						<li><a href="{{ url('/about') }}">About</a></li>
-						<li><a href="{{ url('/resources') }}">Local Resources</a></li>
-						<li><a href="{{ url('/help') }}">Need Help?</a></li>
-						<li><a href="{{ url('/register') }}"
-								style="background-color: #b62133; min-height:70px;">Register</a></li>
+						<li><a href="{{ url('/') }}">HOME I</a></li>
+						<li><a href="{{ url('/home_2') }}">HOME II</a></li>
+						<li><a href="{{ url('/about') }}">ABOUT</a></li>
+						<li><a href="{{ url('/resources') }}">LOCAL RESOURCES</a></li>
+						<li><a href="{{ url('/help') }}">NEED HELP?</a></li>
+						<li id="nav-register-link"><a href="{{ url('/register') }}"
+									 style="background-color: #b62133; min-height:70px;">REGISTER</a></li>
 				</ul>
 			</div>
 		</div>

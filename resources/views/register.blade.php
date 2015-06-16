@@ -1,6 +1,8 @@
 @extends('app')
 
 @section('content')
+
+
 <div class="container" style="margin-bottom:100px;">
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
@@ -12,13 +14,12 @@
 
 				<div class="panel-heading text-center">
 					<h1>Event Registration</h1>
-					Progress 1/5
 				</div>
 				
 				<div class="progress">
-				  <div class="progress-bar" role="progressbar" aria-valuenow="20"
-				  aria-valuemin="0" aria-valuemax="100" style="width:20%">
-				    <span class="sr-only">20% Complete</span>
+				  <div class="progress-bar" role="progressbar" aria-valuenow="14"
+				  aria-valuemin="0" aria-valuemax="100" style="width:14%">
+				    <span class="sr-only">14% Complete</span>
 				  </div>
 				</div>
 				
@@ -195,13 +196,12 @@
 
 				<div class="panel-heading text-center">
 					<h1>Are you a veteran, support personnel, or current member of the U.S. Armed Forces?</h1>
-					Progress 2/5
 				</div>
 				
 				<div class="progress">
-				  <div class="progress-bar" role="progressbar" aria-valuenow="40"
-				  aria-valuemin="0" aria-valuemax="100" style="width:40%">
-				    <span class="sr-only">40% Complete</span>
+				  <div class="progress-bar" role="progressbar" aria-valuenow="28"
+				  aria-valuemin="0" aria-valuemax="100" style="width:28%">
+				    <span class="sr-only">28% Complete</span>
 				  </div>
 				</div>
 				
@@ -238,14 +238,14 @@
 						</a>
 						<div class="fwd-A">	
 							<span>	
-								<a id="step-2-to-3a" class="btn btn-primary">
+								<a id="step-2-to-3" class="btn btn-primary">
 									Forward
 								</a>
 							</span>
 						</div>
 						<div class="fwd-B">	
 							<span>
-								<a id="step-2-to-3b" class="btn btn-primary">
+								<a id="step-2-to-7" class="btn btn-primary">
 									Forward
 								</a>
 							</span>
@@ -256,19 +256,18 @@
 			</div>
 		</div> <!-- end step 2 -->
 
-		<!--  step 3a  -->
-		<div id="step-3a" style="display:none;">
+		<!--  step 3  -->
+		<div id="step-3" style="display:none;">
 			<div class="panel panel-default">
 
 				<div class="panel-heading text-center">
 					<h1>Military Information</h1>
-					Progress 3/5
 				</div>
 				
 				<div class="progress">
-				  <div class="progress-bar" role="progressbar" aria-valuenow="60"
-				  aria-valuemin="0" aria-valuemax="100" style="width:60%">
-				    <span class="sr-only">60% Complete</span>
+				  <div class="progress-bar" role="progressbar" aria-valuenow="42"
+				  aria-valuemin="0" aria-valuemax="100" style="width:42%">
+				    <span class="sr-only">42% Complete</span>
 				  </div>
 				</div>
 				
@@ -359,30 +358,30 @@
 
 				<div class="panel-footer">
 					<span>
-						<a id="step-3a-to-2" class="btn btn-primary">
+						<a id="step-3-to-2" class="btn btn-primary">
 							Back
 						</a>
-						<a id="step-3a-to-4a" class="btn btn-primary">
+						<a id="step-3-to-4" class="btn btn-primary">
 							Forward
 						</a>
 					</span>
 				</div>
 			
 			</div>
-		</div> <!-- end step 3a -->
+		</div> <!-- end step 3 -->
 
-<!--  step 3b  -->
-		<div id="step-3b" style="display:none;">
+<!--  step 4  -->
+		<div id="step-4" style="display:none;">
 			<div class="panel panel-default">
 
 				<div class="panel-heading text-center">
-					Progress 3/5
+					<h1>Nostalgia Question 1</h1>
 				</div>
 				
 				<div class="progress">
-				  <div class="progress-bar" role="progressbar" aria-valuenow="60"
-				  aria-valuemin="0" aria-valuemax="100" style="width:60%">
-				    <span class="sr-only">60% Complete</span>
+				  <div class="progress-bar" role="progressbar" aria-valuenow="56"
+				  aria-valuemin="0" aria-valuemax="100" style="width:56%">
+				    <span class="sr-only">56% Complete</span>
 				  </div>
 				</div>
 				
@@ -431,82 +430,31 @@
 
 				<div class="panel-footer">
 					<span>
-						<a id="step-3b-to-2" class="btn btn-primary">
+						<a id="step-4-to-3" class="btn btn-primary">
 							Back
 						</a>
-						<a id="step-3b-to-4b" class="btn btn-primary">
+						<a id="step-4-to-5" class="btn btn-primary">
 							Forward
 						</a>
 					</span>
 				</div>
 			
 			</div>
-		</div> <!-- end step 3b -->
+		</div> <!-- end step 4 -->
 
-	<!--  step 4a  -->
+	<!--  step 5  -->
 
-		<div id="step-4a" style="display:none;">	
+		<div id="step-5" style="display:none;">	
 			<div class="panel panel-default">
 
 				<div class="panel-heading text-center">
-					Progress 4/5
+					<h1>Nostalgia Question 2</h1>
 				</div>
 				
 				<div class="progress">
-				  <div class="progress-bar" role="progressbar" aria-valuenow="80"
-				  aria-valuemin="0" aria-valuemax="100" style="width:80%">
-				    <span class="sr-only">80% Complete</span>
-				  </div>
-				</div>
-				
-				<div class="panel-body">
-					@if (count($errors) > 0)
-						<div class="alert alert-danger">
-							<strong>Whoops!</strong> There were some problems with your input.<br><br>
-							<ul>
-								@foreach ($errors->all() as $error)
-									<li>{{ $error }}</li>
-								@endforeach
-							</ul>
-						</div>
-					@endif
-					<div class="form-group">
-						<div class="row">
-							<div class="col-md-12">
-								<label>We are collecting stories from Military personnel to include in this event. Use the text box below to share a story or memory of your Military service.</label>
-									<textarea type="" class="form-control" rows="5"></textarea>
-							</div>
-						</div>
-					</div>	
-				</div>
-
-				<div class="panel-footer">
-					<span>
-						<a id="step-4a-to-3a" class="btn btn-primary">
-							Back
-						</a>
-						<a id="step-4a-to-5" class="btn btn-primary">
-							Complete Your Registration
-						</a>
-					</span>
-				</div>
-
-			</div>
-		</div><!-- End step 4 -->
-
-	<!--  step 4b  -->
-
-		<div id="step-4b" style="display:none;">	
-			<div class="panel panel-default">
-
-				<div class="panel-heading text-center">
-					Progress 4/5
-				</div>
-				
-				<div class="progress">
-				  <div class="progress-bar" role="progressbar" aria-valuenow="80"
-				  aria-valuemin="0" aria-valuemax="100" style="width:80%">
-				    <span class="sr-only">80% Complete</span>
+				  <div class="progress-bar" role="progressbar" aria-valuenow="70"
+				  aria-valuemin="0" aria-valuemax="100" style="width:70%">
+				    <span class="sr-only">70% Complete</span>
 				  </div>
 				</div>
 				
@@ -552,25 +500,78 @@
 
 				<div class="panel-footer">
 					<span>
-						<a id="step-4b-to-3b" class="btn btn-primary">
+						<a id="step-5-to-4" class="btn btn-primary">
 							Back
 						</a>
-						<a id="step-4b-to-5" class="btn btn-primary">
+						<a id="step-5-to-6" class="btn btn-primary">
+							Forward
+						</a>
+					</span>
+				</div>
+
+			</div>
+		</div><!-- End step 5 -->
+
+
+	<!--  step 6  -->
+
+		<div id="step-6" style="display:none;">	
+			<div class="panel panel-default">
+
+				<div class="panel-heading text-center">
+					<h1>Nostalgia Question 3</h1>
+				</div>
+				
+				<div class="progress">
+				  <div class="progress-bar" role="progressbar" aria-valuenow="84"
+				  aria-valuemin="0" aria-valuemax="100" style="width:84%">
+				    <span class="sr-only">84% Complete</span>
+				  </div>
+				</div>
+				
+				<div class="panel-body">
+					@if (count($errors) > 0)
+						<div class="alert alert-danger">
+							<strong>Whoops!</strong> There were some problems with your input.<br><br>
+							<ul>
+								@foreach ($errors->all() as $error)
+									<li>{{ $error }}</li>
+								@endforeach
+							</ul>
+						</div>
+					@endif
+					<div class="form-group">
+						<div class="row">
+							<div class="col-md-12">
+								<label>We are collecting stories from Military personnel to include in this event. Use the text box below to share a story or memory of your Military service.</label>
+									<textarea type="" class="form-control" rows="5"></textarea>
+							</div>
+						</div>
+					</div>	
+				</div>
+
+				<div class="panel-footer">
+					<span>
+						<a id="step-6-to-5" class="btn btn-primary">
+							Back
+						</a>
+						<a id="step-6-to-7" class="btn btn-primary">
 							Complete Your Registration
 						</a>
 					</span>
 				</div>
 
 			</div>
-		</div><!-- End step 4 -->
+		</div><!-- End step 6 -->
 
-		<!--  step 5  -->
 
-		<div id="step-5" style="display:none;">
+		<!--  step 7  -->
+
+		<div id="step-7" style="display:none;">
 			<div class="panel panel-default">
 
 				<div class="panel-heading text-center">
-					Progress 5/5
+					<h1>Registration Complete</h1>
 				</div>
 				
 				<div class="progress">
@@ -579,7 +580,6 @@
 				    <span class="sr-only">100% Complete</span>
 				  </div>
 				</div>
-
 				
 				<div class="panel-body">
 					<div class="form-group">
@@ -602,7 +602,7 @@
 				</div>
 
 			</div>
-		</div> <!-- End step 5 -->
+		</div> <!-- End step 7 -->
 
 		</div>
 	</div>
@@ -649,54 +649,63 @@ $('#step-1-to-2').click(function () {
   $("#step-1, #step-2").toggle();
 });
 
-	// A track
-	$('#step-2-to-3a').click(function () {
-	  $("#step-2, #step-3a").toggle();
+
+
+	$('#step-2-to-3').click(function () {
+	  $("#step-2, #step-3").toggle();
 	});
 
-	$('#step-3a-to-4a').click(function () {
-	  $("#step-3a, #step-4a").toggle();
+		// non military
+		
+		$('#step-2-to-7').click(function () {
+		  $("#step-2, #step-7").toggle();
+		});
+		
+	//military	
+	$('#step-3-to-4').click(function () {
+	  $("#step-3, #step-4").toggle();
 	});
 
-	$('#step-4a-to-5').click(function () {
-	  $("#step-4a, #step-5").toggle();
+	$('#step-4-to-5').click(function () {
+	  $("#step-4, #step-5").toggle();
 	});
 
-	// B track
-	$('#step-2-to-3b').click(function () {
-	  $("#step-2, #step-3b").toggle();
+
+	$('#step-5-to-6').click(function () {
+	  $("#step-5, #step-6").toggle();
 	});
 
-	$('#step-3b-to-4b').click(function () {
-	  $("#step-3b, #step-4b").toggle();
+	$('#step-6-to-7').click(function () {
+	  $("#step-6, #step-7").toggle();
 	});
 
-	$('#step-4b-to-5').click(function () {
-	  $("#step-4b, #step-5").toggle();
-	});
 
-// BACK STEP
+// BACKWARDS
 
-$('#step-2-to-1').click(function () {
-  $("#step-2, #step-1").toggle();
+$('#step-7-to-6').click(function () {
+  $("#step-7, #step-6").toggle();
 });
 
 	// A track
-	$('#step-4a-to-3a').click(function () {
-	  $("#step-4a, #step-3a").toggle();
+	$('#step-6-to-5').click(function () {
+	  $("#step-6, #step-5").toggle();
 	});
 
-	$('#step-3a-to-2').click(function () {
-	  $("#step-3a, #step-2").toggle();
+	$('#step-5-to-4').click(function () {
+	  $("#step-5, #step-4").toggle();
 	});
 
 	// B track
-	$('#step-4b-to-3b').click(function () {
-	  $("#step-4b, #step-3b").toggle();
+	$('#step-4-to-3').click(function () {
+	  $("#step-4, #step-3").toggle();
 	});
 
-	$('#step-3b-to-2').click(function () {
-	  $("#step-3b, #step-2").toggle();
+	$('#step-3-to-2').click(function () {
+	  $("#step-3, #step-2").toggle();
+	});
+
+  $('#step-2-to-1').click(function () {
+	  $("#step-2, #step-1").toggle();
 	});
 
 </script>
