@@ -128,29 +128,41 @@
 							</div>
 
 							<div class="col-md-6">
-								<a class="btn btn-danger" href="{{ url('/') }}">HELP I DONT HAVE AN EMAIL</a>
+								<a class="btn btn-danger btn-block" href="{{ url('/') }}">HELP I DONT HAVE AN EMAIL</a>
 							</div>
 						</div>
 
 						<div class="form-group">
-
 							<div class="col-md-3">
-							  <label><input type="radio" name="male"> Male</label>
+							  <label><input type="radio" name="gender" value="male"> Male</label>
 							</div>
 
 							<div class="col-md-3">
-							  <label><input type="radio" name="female"> Female</label>
+							  <label><input type="radio" name="gender" value="female"> Female</label>
 							</div>
 							
 							<div class="col-md-6">
 								<input type="text" class="form-control" name="age" placeholder="Age">
 							</div>
-
 						</div>
 
-
-						<div class="checkbox">
-							<label><input type="checkbox" name="handicap" checked />Check box if you are handicapped or need assistance?</label>
+						<div class="form-group">
+							<div class="col-md-6">
+								<div class="checkbox">
+									<label><input type="checkbox" name="handicap" />Check box if you are handicapped or need assistance?</label>
+								</div>
+								<input style="display:none;" type="text" class="form-control" name="name" placeholder="Enter your name here">
+							</div>
+							<div class="col-md-6">
+								<label>Tell us how you heard about the event:</label>
+								<select class="form-control" id="state" name="state" placeholder="State">
+									<option value="newspaper">Newspaper</option>
+									<option value="billboard">Billboard</option>
+									<option value="printed_invite">Printed Invite</option>
+									<option value="radio">Radio</option>
+									<option value="social_media">Social Media</option>
+								</select>
+							</div>
 						</div>
 
 						<br>
@@ -319,12 +331,12 @@
 							</div>
 							<div class="col-md-3">
 								<div class="radio">
-							  		<label><input type="radio" name="active">Active</label>
+							  		<label><input type="radio" name="status" value="active">Active</label>
 							  	</div>
 							</div>
 							<div class="col-md-3">
 								<div class="radio">
-							  		<label><input type="radio" name="veteran">Veteran</label>
+							  		<label><input type="radio" name="status" value="veteran">Veteran</label>
 							  	</div>
 							</div>
 						</div>

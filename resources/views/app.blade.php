@@ -60,10 +60,12 @@
 		.navbar-footer > a {
 			color: #26335e;
 			font-weight: bold;
+			font-size: 16px; 
 		}
 
 		.navbar-footer > p {
 			color: #26335e;
+			font-size: 14px; 
 		}
 
 	.navbar-brand {
@@ -89,7 +91,7 @@
 	.navbar-right > span {
 	  position: relative;
 	  top:10px;
-	  right:0px;
+	  right:16px;
 	  padding: 10px 15px;
 	}
 
@@ -113,6 +115,11 @@
 	.navbar-default .navbar-nav > a:hover {
 			color:#b62133;
 		}
+
+	.nav > li {
+		border-left: 1px solid white;
+  		border-right: 1px solid white;
+	}
 
 	.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus
 	{
@@ -155,6 +162,12 @@
 
 	.fwd-A, .fwd-B {
 		display: inline;
+	}
+
+	.social-icons-footer {
+		max-height:32px; 
+		position:relative; 
+		top:16px;
 	}
 
 	</style>
@@ -200,9 +213,9 @@
 			</div>
 			<div class="navbar-right navbar-rt-footer">
 				<span>
-					<img src="{{ asset('/images/footer_600px.png') }}" style="max-height:50px;" alt="" />
-					<img src="{{ asset('/images/fb_icon.png') }}" style="max-height:35px;" alt="" />
-					<img src="{{ asset('/images/tw_icon.png') }}" style="max-height:35px;" alt="" />
+					<img src="{{ asset('/images/footer_600px.png') }}" style="max-height:60px; margin-right:10px;" alt="" />
+					<img class="social-icons-footer"src="{{ asset('/images/fb_icon.png') }}" alt="" />
+					<img class="social-icons-footer" src="{{ asset('/images/tw_icon.png') }}" alt="" />
 				</span>
 			</div>
 		</div>
